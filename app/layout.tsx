@@ -22,9 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={`${poppins.className} relative`}>
         <Navbar />
-        <main className="min-h-screen">
+        <main className="min-h-screen relative z-0">
           {children}
         </main>
         <Footer />

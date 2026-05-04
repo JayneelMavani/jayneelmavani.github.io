@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -43,19 +44,21 @@ export default function About() {
           <div className="fade-in-up">
             <div className="relative w-full aspect-square rounded-2xl overflow-hidden glass">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20"></div>
-              <img
+              <Image
                 src="/assets/img.png"
                 alt="Profile"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
               />
             </div>
           </div>
 
           <div className="fade-in-up space-y-6">
             <p className="text-xl text-gray-300 leading-relaxed">
-              I'm Jayneel Mavani, a second-year Computer Science Engineering student at Silver Oak University, 
+              I&apos;m Jayneel Mavani, a second-year Computer Science Engineering student at Silver Oak University, 
               passionate about building beautiful and functional web applications. With expertise in modern web 
-              technologies and a growing interest in cybersecurity, I'm committed to creating innovative solutions 
+              technologies and a growing interest in cybersecurity, I&apos;m committed to creating innovative solutions 
               that make a real impact.
             </p>
             

@@ -24,7 +24,7 @@ export default function Contact() {
           </h1>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mx-auto"></div>
           <p className="text-gray-400 text-lg mt-6 max-w-2xl mx-auto">
-            Have a question or want to collaborate? Feel free to reach out. I'm always interested in hearing about new projects and opportunities.
+            Have a question or want to collaborate? Feel free to reach out. I&apos;m always interested in hearing about new projects and opportunities.
           </p>
         </div>
 
