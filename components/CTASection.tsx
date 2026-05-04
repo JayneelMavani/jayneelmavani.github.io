@@ -12,7 +12,7 @@ export default function CTASection() {
             </h2>
             <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
               Whether you have a project in mind or just want to chat about tech, 
-              I'd love to hear from you. Let's create something amazing!
+              I&apos;d love to hear from you. Let&apos;s create something amazing!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

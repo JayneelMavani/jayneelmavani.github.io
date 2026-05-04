@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import Image from 'next/image'
 
 export default function HeroSection() {
   const heroRef = useRef(null)
@@ -59,7 +60,7 @@ export default function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="min-h-screen flex items-center justify-center pt-20 overflow-hidden"
+      className="min-h-screen flex items-center justify-center pt-20 overflow-hidden relative z-0"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -69,7 +70,7 @@ export default function HeroSection() {
               ref={titleRef}
               className="text-5xl md:text-7xl font-bold leading-tight mb-6"
             >
-              Hi, I'm <span className="text-gradient">Jayneel</span>
+              Hi, I&apos;m <span className="text-gradient">Jayneel</span>
             </h1>
 
             <div
@@ -127,10 +128,13 @@ export default function HeroSection() {
           <div className="relative">
             <div className="hero-img relative w-full aspect-square rounded-2xl overflow-hidden glass group">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/30 to-blue-500/30 group-hover:from-cyan-500/50 group-hover:to-blue-500/50 transition-all duration-300"></div>
-              <img
+              <Image
                 src="/assets/img.png"
                 alt="Profile"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover group-hover:scale-110 transition-transform duration-500"
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-dark/50 to-transparent"></div>
             </div>
