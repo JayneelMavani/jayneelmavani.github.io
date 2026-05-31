@@ -3,27 +3,30 @@
 ## 🚀 Getting Started in 3 Steps
 
 ### 1. Install Dependencies
+
 ```bash
 npm install
 ```
 
 ### 2. Run Development Server
+
 ```bash
 npm run dev
 ```
 
 ### 3. Open in Browser
+
 Navigate to `http://localhost:3000`
 
 ## 📂 Key Files to Customize
 
-| File | Purpose | Edit For |
-|------|---------|----------|
-| `app/page.tsx` | Home page | Hero section content |
-| `components/HeroSection.tsx` | Hero section | Your bio and image |
-| `components/SkillsSection.tsx` | Skills display | Your tech stack |
-| `components/FeaturedProjects.tsx` | Featured projects | Your best work |
-| `app/about/page.tsx` | About page | Your background |
+| File                              | Purpose           | Edit For             |
+| --------------------------------- | ----------------- | -------------------- |
+| `app/page.tsx`                    | Home page         | Hero section content |
+| `components/HeroSection.tsx`      | Hero section      | Your bio and image   |
+| `components/SkillsSection.tsx`    | Skills display    | Your tech stack      |
+| `components/FeaturedProjects.tsx` | Featured projects | Your best work       |
+| `app/about/page.tsx`              | About page        | Your background      |
 
 ## 🎨 Features Included
 
@@ -36,7 +39,7 @@ Navigate to `http://localhost:3000`
 ✅ **Responsive Design** - Works on all devices  
 ✅ **Dark Theme** - Modern dark color scheme  
 ✅ **GSAP Animations** - Smooth, professional animations  
-✅ **Tailwind CSS** - Beautiful utility-first styling  
+✅ **Tailwind CSS** - Beautiful utility-first styling
 
 ## 🔧 Build for Production
 

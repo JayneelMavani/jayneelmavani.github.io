@@ -1,114 +1,132 @@
-'use client'
+"use client";
 
-import { FormEvent, useState } from 'react'
+import { FormEvent, useState } from "react";
 
 export default function ContactForm() {
-  const [loading, setLoading] = useState(false)
-  const [message, setMessage] = useState('')
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setLoading(true)
+    e.preventDefault();
+    setLoading(true);
+    setMessage("");
 
-    const formData = new FormData(e.currentTarget)
+    const formData = new FormData(e.currentTarget);
     const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      subject: formData.get('subject'),
-      message: formData.get('message'),
-    }
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
 
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
-      })
+      });
 
       if (res.ok) {
-        setMessage('Thanks for reaching out! I\'ll get back to you soon.')
-        e.currentTarget.reset()
+        setIsSuccess(true);
+        setMessage("Thanks for reaching out! I'll get back to you soon.");
+        e.currentTarget.reset();
       } else {
-        setMessage('Something went wrong. Please try again.')
+        setIsSuccess(false);
+        setMessage("Something went wrong. Please try again.");
       }
-    } catch (error) {
-      setMessage('Error sending message. Please try again.')
+    } catch {
+      setIsSuccess(false);
+      setMessage("Error sending message. Please try again.");
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6" noValidate>
       {message && (
-        <div className={`p-4 rounded-lg ${message.includes('Thanks') ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'}`}>
+        <div
+          role="status"
+          aria-live="polite"
+          className={`p-4 rounded-lg text-sm ${
+            isSuccess
+              ? "bg-green-500/20 text-green-300"
+              : "bg-red-500/20 text-red-300"
+          }`}
+        >
           {message}
         </div>
       )}
 
       <div>
-        <label htmlFor="name" className="block text-sm font-semibold mb-2">
-          Name
+        <label
+          htmlFor="name"
+          className="block text-sm font-semibold mb-2 text-gray-200"
+        >
+          Name{" "}
+          <span className="text-red-400" aria-hidden="true">
+            *
+          </span>
         </label>
         <input
           type="text"
           id="name"
           name="name"
           required
-          className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors duration-300"
+          autoComplete="name"
+          className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder:text-gray-500 focus:border-cyan-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/50 transition-colors"
           placeholder="Your name"
         />
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-semibold mb-2">
-          Email
+        <label
+          htmlFor="email"
+          className="block text-sm font-semibold mb-2 text-gray-200"
+        >
+          Email{" "}
+          <span className="text-red-400" aria-hidden="true">
+            *
+          </span>
         </label>
         <input
           type="email"
           id="email"
           name="email"
           required
-          className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors duration-300"
+          autoComplete="email"
+          className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder:text-gray-500 focus:border-cyan-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/50 transition-colors"
           placeholder="your@email.com"
         />
       </div>
 
       <div>
-        <label htmlFor="subject" className="block text-sm font-semibold mb-2">
-          Subject
-        </label>
-        <input
-          type="text"
-          id="subject"
-          name="subject"
-          required
-          className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors duration-300"
-          placeholder="Project inquiry"
-        />
-      </div>
-
-      <div>
-        <label htmlFor="message" className="block text-sm font-semibold mb-2">
-          Message
+        <label
+          htmlFor="message"
+          className="block text-sm font-semibold mb-2 text-gray-200"
+        >
+          Message{" "}
+          <span className="text-red-400" aria-hidden="true">
+            *
+          </span>
         </label>
         <textarea
           id="message"
           name="message"
           required
           rows={5}
-          className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors duration-300 resize-none"
+          className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder:text-gray-500 focus:border-cyan-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/50 transition-colors resize-y min-h-[120px]"
           placeholder="Tell me about your project..."
-        ></textarea>
+        />
       </div>
 
       <button
         type="submit"
         disabled={loading}
-        className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+        className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
       >
-        {loading ? 'Sending...' : 'Send Message'}
+        {loading ? "Sending..." : "Send Message"}
       </button>
     </form>
-  )
+  );
 }

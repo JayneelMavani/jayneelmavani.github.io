@@ -1,0 +1,93 @@
+[
+  {
+    "slug": "ecommerce-platform",
+    "title": "E-Commerce Platform",
+    "description": "A full-stack e-commerce solution with product catalog, cart, checkout, and admin dashboard.",
+    "shortDescription": "Full-stack e-commerce solution with Next.js, MongoDB, and Stripe integration.",
+    "thumbnail": "/assets/projects/ecommerce.svg",
+    "tags": ["Next.js", "MongoDB", "Tailwind", "Stripe"],
+    "featured": true,
+    "github": "https://github.com",
+    "demo": "https://example.com",
+    "overview": "A production-ready e-commerce platform built with modern web technologies. Supports product browsing, user authentication, shopping cart, and secure payment processing.",
+    "features": [
+      "Product catalog with search and filtering",
+      "User authentication and profiles",
+      "Shopping cart and wishlist",
+      "Stripe payment integration",
+      "Admin dashboard for inventory management"
+    ],
+    "techStack": [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Tailwind CSS",
+      "Stripe",
+      "NextAuth.js"
+    ],
+    "screenshots": ["/assets/projects/ecommerce.svg"],
+    "challenges": "Handling real-time inventory updates across concurrent users while maintaining data consistency and preventing overselling.",
+    "solution": "Implemented optimistic locking with MongoDB transactions and a queue-based inventory sync system to ensure accurate stock levels.",
+    "architecture": "Monolithic Next.js app with API routes, MongoDB for persistence, and Stripe webhooks for payment events."
+  },
+  {
+    "slug": "task-management-app",
+    "title": "Task Management App",
+    "description": "A collaborative task management tool with real-time updates, team boards, and project tracking.",
+    "shortDescription": "Collaborative task management tool with real-time updates and team boards.",
+    "thumbnail": "/assets/projects/task-app.svg",
+    "tags": ["React", "Firebase", "Tailwind"],
+    "featured": true,
+    "github": "https://github.com",
+    "demo": "https://example.com",
+    "overview": "A Kanban-style task management application designed for small teams. Features drag-and-drop boards, real-time collaboration, and activity tracking.",
+    "features": [
+      "Drag-and-drop Kanban boards",
+      "Real-time team collaboration",
+      "Task assignments and due dates",
+      "Activity feed and notifications",
+      "Project and label organization"
+    ],
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Firebase",
+      "Tailwind CSS",
+      "React DnD"
+    ],
+    "screenshots": ["/assets/projects/task-app.svg"],
+    "challenges": "Synchronizing drag-and-drop state across multiple clients in real-time without conflicts or UI jank.",
+    "solution": "Used Firebase Realtime Database with operational transforms and debounced write operations to keep all clients in sync smoothly."
+  },
+  {
+    "slug": "security-dashboard",
+    "title": "Security Dashboard",
+    "description": "A cybersecurity monitoring dashboard with real-time analytics, threat detection, and reporting.",
+    "shortDescription": "Cybersecurity monitoring dashboard with real-time analytics and threat detection.",
+    "thumbnail": "/assets/projects/security.svg",
+    "tags": ["Next.js", "D3.js", "Node.js"],
+    "featured": true,
+    "github": "https://github.com",
+    "demo": "https://example.com",
+    "overview": "An analytics dashboard for monitoring security events, visualizing threat patterns, and generating compliance reports for security teams.",
+    "features": [
+      "Real-time event monitoring",
+      "Interactive data visualizations",
+      "Alert configuration and notifications",
+      "Compliance report generation",
+      "Role-based access control"
+    ],
+    "techStack": [
+      "Next.js",
+      "Node.js",
+      "D3.js",
+      "PostgreSQL",
+      "WebSockets",
+      "Tailwind CSS"
+    ],
+    "screenshots": ["/assets/projects/security.svg"],
+    "challenges": "Processing and visualizing high-volume security event streams without degrading dashboard performance.",
+    "solution": "Implemented server-side aggregation with time-window bucketing and virtualized chart rendering for smooth performance at scale.",
+    "architecture": "Next.js frontend with a Node.js event processing pipeline, PostgreSQL for event storage, and WebSocket connections for live updates."
+  }
+]

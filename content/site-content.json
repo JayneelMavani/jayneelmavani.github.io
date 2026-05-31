@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Your Name",
+    "role": "Full Stack Developer",
+    "bio": "I build beautiful, responsive web applications with modern technologies. Passionate about creating exceptional user experiences with clean, maintainable code.",
+    "ctaPrimary": { "label": "View My Work", "href": "#projects" },
+    "ctaSecondary": { "label": "Get In Touch", "href": "/contact" }
+  },
+  "about": {
+    "intro": [
+      "I'm a developer passionate about building beautiful and functional web applications. With expertise in modern web technologies, I'm committed to creating innovative solutions that make a real impact.",
+      "My journey in tech has been driven by curiosity and a desire to solve real-world problems through code. I believe in continuous learning and staying updated with the latest technologies and best practices."
+    ],
+    "highlights": [
+      "Full Stack Web Development",
+      "UI/UX Design",
+      "Open Source Contributions"
+    ]
+  },
+  "cta": {
+    "title": "Ready to work",
+    "titleAccent": "together?",
+    "description": "Whether you have a project in mind or just want to chat about tech, I'd love to hear from you. Let's create something amazing!",
+    "primary": { "label": "Start a Project", "href": "/contact" },
+    "secondary": {
+      "label": "Send an Email",
+      "href": "mailto:hello@example.com"
+    }
+  },
+  "footer": {
+    "tagline": "Building beautiful web experiences with modern technologies.",
+    "copyright": "Portfolio Template. All rights reserved."
+  }
+}

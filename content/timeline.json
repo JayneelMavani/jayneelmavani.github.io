@@ -1,0 +1,26 @@
+[
+  {
+    "id": "education-1",
+    "type": "education",
+    "period": "2020 — Present",
+    "title": "Bachelor's in Computer Science",
+    "organization": "Your University",
+    "description": "Focused on software engineering, web development, and computer science fundamentals."
+  },
+  {
+    "id": "experience-1",
+    "type": "experience",
+    "period": "2023 — 2024",
+    "title": "Frontend Developer Intern",
+    "organization": "Tech Company",
+    "description": "Built responsive web applications using React, Next.js, and Tailwind CSS in an agile team environment."
+  },
+  {
+    "id": "achievement-1",
+    "type": "achievement",
+    "period": "2024",
+    "title": "Open Source Contributor",
+    "organization": "GitHub",
+    "description": "Contributed to developer tooling and documentation projects used by thousands of developers."
+  }
+]
