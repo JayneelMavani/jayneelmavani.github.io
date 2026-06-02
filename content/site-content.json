@@ -4,7 +4,10 @@
     "name": "Jayneel",
     "role": "Full Stack Developer",
     "bio": "I build beautiful, responsive web applications with modern technologies. Passionate about creating exceptional user experiences with clean, maintainable code.",
-    "ctaPrimary": { "label": "View My Work", "href": "#projects" },
+    "ctaPrimary": {
+      "label": "View My Work",
+      "href": "https://github.com/JayneelMavani?tab=repositories"
+    },
     "ctaSecondary": { "label": "Get In Touch", "href": "/contact" }
   },
   "about": {
@@ -12,10 +15,7 @@
       "I'm a developer passionate about building beautiful and functional web applications. With expertise in modern web technologies, I'm committed to creating innovative solutions that make a real impact.",
       "My journey in tech has been driven by curiosity and a desire to solve real-world problems through code. I believe in continuous learning and staying updated with the latest technologies and best practices."
     ],
-    "highlights": [
-      "Full Stack Web Development",
-      "UI/UX Design"
-    ]
+    "highlights": ["Full Stack Web Development", "UI/UX Design"]
   },
   "cta": {
     "title": "Ready to work",

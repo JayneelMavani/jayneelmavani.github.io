@@ -7,8 +7,8 @@
     "thumbnail": "/assets/projects/ecommerce.svg",
     "tags": ["Next.js", "MongoDB", "Tailwind", "Stripe"],
     "featured": true,
-    "github": "https://github.com",
-    "demo": "https://example.com",
+    "github": "https://github.com/jayneelmavani/",
+    "demo": "https://JayneelMavani.github.io/",
     "overview": "A production-ready e-commerce platform built with modern web technologies. Supports product browsing, user authentication, shopping cart, and secure payment processing.",
     "features": [
       "Product catalog with search and filtering",
