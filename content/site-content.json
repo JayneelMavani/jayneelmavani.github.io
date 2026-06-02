@@ -1,7 +1,7 @@
 {
   "hero": {
     "greeting": "Hi, I'm",
-    "name": "Your Name",
+    "name": "Jayneel",
     "role": "Full Stack Developer",
     "bio": "I build beautiful, responsive web applications with modern technologies. Passionate about creating exceptional user experiences with clean, maintainable code.",
     "ctaPrimary": { "label": "View My Work", "href": "#projects" },
@@ -14,8 +14,7 @@
     ],
     "highlights": [
       "Full Stack Web Development",
-      "UI/UX Design",
-      "Open Source Contributions"
+      "UI/UX Design"
     ]
   },
   "cta": {
@@ -25,7 +24,7 @@
     "primary": { "label": "Start a Project", "href": "/contact" },
     "secondary": {
       "label": "Send an Email",
-      "href": "mailto:hello@example.com"
+      "href": "jmavani@gmail.com"
     }
   },
   "footer": {
