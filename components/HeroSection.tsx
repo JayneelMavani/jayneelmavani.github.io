@@ -20,7 +20,7 @@ export default function HeroSection() {
           <div className="order-2 md:order-1">
             <h1
               id="hero-heading"
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 sm:mb-6 text-white"
+              className="text-4xl sm:text-4xl md:text-4xl lg:text-6xl font-bold leading-tight mb-5 sm:mb-6 text-white"
             >
               {content.greeting}{" "}
               <span className="text-gradient">{content.name}</span>
