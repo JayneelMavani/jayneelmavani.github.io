@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import ProjectHero from "@/components/projects/ProjectHero";
+// import ProjectHero from "@/components/projects/ProjectHero";
 import ProjectDetailSection from "@/components/projects/ProjectDetailSection";
 import ProjectGallery from "@/components/projects/ProjectGallery";
 import { getAllProjectSlugs, getProjectBySlug } from "@/lib/data/projects";
@@ -30,7 +30,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
   return (
     <article className="min-h-screen pt-24 sm:pt-28 pb-16 sm:pb-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ProjectHero project={project} />
+        {/* <ProjectHero project={project} /> */}
 
         <ProjectDetailSection title="Overview">
           <p>{project.overview}</p>

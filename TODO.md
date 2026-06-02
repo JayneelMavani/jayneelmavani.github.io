@@ -1,0 +1,8 @@
+- `site-content.json:7` "ctaPrimary": { "label": "View My Work", "href": "#projects" },
+- Section Break Gradient
+- Change emojis to React-Icons
+- Add projects after final completion
+- Change the themes and typography
+- Implement Email Services
+- Update About section and all other informations
+- Add Resume PDF
