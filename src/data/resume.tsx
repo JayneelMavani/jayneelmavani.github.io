@@ -65,12 +65,12 @@ export const DATA = {
 
         navbar: true,
       },
-      Youtube: {
-        name: "Youtube",
-        url: "https://www.youtube.com/@jayneelmavani1653",
-        icon: Icons.youtube,
-        navbar: true,
-      },
+      // Youtube: {
+      //   name: "Youtube",
+      //   url: "https://www.youtube.com/@jayneelmavani1653",
+      //   icon: Icons.youtube,
+      //   navbar: true,
+      // },
       email: {
         name: "Send Email",
         url: "mailto:contact@jayneel.online",
@@ -106,30 +106,22 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Project Title",
-      href: "URL",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Finance Tracker",
+      href: "https://github.com/JayneelMavani/Finance-Tracker",
+      // dates: "",
       active: true,
-      description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://chatcollect.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      description: "Simple Finance Tracker.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      // links: [
+      //   {
+      //     type: "Website",
+      //     href: "https://chatcollect.com",
+      //     icon: <Icons.globe className="size-3" />,
+      //   },
+      // ],
+      // image: "",
+      // video:
+      //   "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
   ],
   hackathons: [
