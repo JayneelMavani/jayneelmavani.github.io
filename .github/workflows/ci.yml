@@ -15,20 +15,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Debug workspace
-        run: |
-          echo "PWD:"
-          pwd
-
-          echo "FILES:"
-          ls -la
-
-          echo "PACKAGE FILES:"
-          find . -name package.json
-
-          echo "GITHUB WORKSPACE:"
-          echo $GITHUB_WORKSPACE
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
