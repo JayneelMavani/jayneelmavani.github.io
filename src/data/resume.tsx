@@ -97,7 +97,7 @@ export const DATA = {
   education: [
     {
       school: "Silver Oak University",
-      href: "https://silveroakuniversity.edu",
+      href: "https://silveroakuni.ac.in",
       degree: "Bachelor of Technology in Computer Science and Engineering",
       logoUrl: "/silveroakuni.jpg",
       start: "2023",
