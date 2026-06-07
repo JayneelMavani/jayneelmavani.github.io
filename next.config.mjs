@@ -2,10 +2,6 @@ import { withContentCollections } from "@content-collections/next";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
   reactStrictMode: true,
   async headers() {
     return [
@@ -34,4 +30,5 @@ const nextConfig = {
   },
 };
 
+// withContentCollections must be the outermost plugin
 export default withContentCollections(nextConfig);
