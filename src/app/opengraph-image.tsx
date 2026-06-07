@@ -1,8 +1,9 @@
- 
 import { ImageResponse } from "next/og";
 import { DATA } from "@/data/resume";
+import fs from "fs";
+import path from "path";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 export const alt = DATA.name;
 export const size = {
@@ -11,19 +12,26 @@ export const size = {
 };
 export const contentType = "image/png";
 
-const getFontData = async () => {
+const getFontData = () => {
     try {
-        const [cabinetGrotesk, clashDisplay] = await Promise.all([
-            fetch(
-                new URL("../../public/fonts/CabinetGrotesk-Medium.ttf", import.meta.url)
-            ).then((res) => res.arrayBuffer()),
-            fetch(
-                new URL("../../public/fonts/ClashDisplay-Semibold.ttf", import.meta.url)
-            ).then((res) => res.arrayBuffer()),
-        ]);
+        const cabinetGrotesk = fs.readFileSync(
+            path.join(process.cwd(), "public/fonts/CabinetGrotesk-Medium.ttf")
+        );
+        const clashDisplay = fs.readFileSync(
+            path.join(process.cwd(), "public/fonts/ClashDisplay-Semibold.ttf")
+        );
         return { cabinetGrotesk, clashDisplay };
     } catch (error) {
         console.error("Failed to load fonts:", error);
+        return null;
+    }
+};
+
+const getAvatarSrc = () => {
+    try {
+        const data = fs.readFileSync(path.join(process.cwd(), "public/me.png"));
+        return `data:image/png;base64,${data.toString("base64")}`;
+    } catch {
         return null;
     }
 };
@@ -105,21 +113,19 @@ const styles = {
     },
 } as const;
 
-export default async function Image() {
+export default function Image() {
     try {
-        const fontData = await getFontData();
-        const imageUrl = DATA.avatarUrl
-            ? new URL(DATA.avatarUrl, DATA.url).toString()
-            : undefined;
+        const fontData = getFontData();
+        const avatarSrc = getAvatarSrc();
 
         return new ImageResponse(
             (
                 <div style={styles.outerWrapper}>
                     <div style={styles.middleWrapper}>
                         <div style={styles.wrapper}>
-                            {imageUrl && (
+                            {avatarSrc && (
                                 <div style={styles.imageSection}>
-                                    <img src={imageUrl} alt={DATA.name} style={styles.image} />
+                                    <img src={avatarSrc} alt={DATA.name} style={styles.image} />
                                 </div>
                             )}
                             <div style={styles.mainContainer}>
@@ -162,11 +168,7 @@ export default async function Image() {
         console.error("Error generating OpenGraph image:", error);
         return new Response(
             `Failed to generate image: ${error instanceof Error ? error.message : "Unknown error"}`,
-            {
-                status: 500,
-            }
+            { status: 500 }
         );
     }
 }
-
-

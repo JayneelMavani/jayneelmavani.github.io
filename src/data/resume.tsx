@@ -108,31 +108,21 @@ export const DATA = {
     {
       title: "Finance Tracker",
       href: "https://github.com/JayneelMavani/Finance-Tracker",
-      // dates: "",
+      dates: "",
       active: true,
       description: "Simple Finance Tracker.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      // links: [
-      //   {
-      //     type: "Website",
-      //     href: "https://chatcollect.com",
-      //     icon: <Icons.globe className="size-3" />,
-      //   },
-      // ],
-      // image: "",
-      // video:
-      //   "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
-    },
-  ],
-  hackathons: [
-    {
-      title: "",
-      dates: "",
-      location: "",
-      description: "",
+      links: [
+        {
+          type: "Website",
+          href: "https://chatcollect.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
       image: "",
-      mlh: "",
-      links: [],
+      video:
+        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
   ],
+  hackathons: [],
 } as const;
