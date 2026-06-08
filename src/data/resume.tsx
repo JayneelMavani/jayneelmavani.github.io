@@ -100,8 +100,8 @@ export const DATA = {
       href: "https://silveroakuni.ac.in",
       degree: "Bachelor of Technology in Computer Science and Engineering",
       logoUrl: "/silveroakuni.jpg",
-      start: "2023",
-      end: "2027",
+      start: "2024",
+      end: "2028",
     },
   ],
   projects: [
@@ -117,6 +117,11 @@ export const DATA = {
           type: "Website",
           href: "https://finance-tracker.jayneel.online/",
           icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "GitHub",
+          href: "https://github.com/JayneelMavani/Finance-Tracker",
+          icon: <Icons.gitFork className="size-3" />,
         },
       ],
       image: "",
