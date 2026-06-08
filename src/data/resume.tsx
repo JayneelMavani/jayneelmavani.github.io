@@ -107,7 +107,7 @@ export const DATA = {
   projects: [
     {
       title: "Finance Tracker",
-      href: "https://github.com/JayneelMavani/Finance-Tracker",
+      href: "https://finance-tracker.jayneel.online/",
       dates: "",
       active: true,
       description: "Simple Finance Tracker.",
@@ -115,13 +115,13 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://finance-tracker.jayneel.online/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+        "https://kreipvjulnqgcwhrphnw.supabase.co/storage/v1/object/public/Finance-tracker/Finance.mp4",
     },
   ],
   hackathons: [],
